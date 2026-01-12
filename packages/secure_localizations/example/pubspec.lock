@@ -150,14 +150,14 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.8"
+    version: "1.1.0"
   secure_strings:
     dependency: transitive
     description:
       path: "../../secure_strings"
       relative: true
     source: path
-    version: "1.0.8"
+    version: "1.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
