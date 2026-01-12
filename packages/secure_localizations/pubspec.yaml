@@ -1,5 +1,6 @@
 name: secure_localizations
 description: A tool to encrypt ARB files and auto-patch generated localization files with secure_strings.
+resolution: workspace
 version: 1.0.8
 
 # Temporary
@@ -8,7 +9,7 @@ publish_to: none
 # repository: https://github.com/DowranRowshenow/secure_localizations
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
 
 dependencies:
   # Required to read the user's pubspec configuration and package name
