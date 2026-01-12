@@ -1,0 +1,25 @@
+name: secure_localizations
+description: A tool to encrypt ARB files and auto-patch generated localization files with secure_strings.
+version: 1.0.8
+
+# Temporary
+publish_to: none
+# If you plan to publish to pub.dev, add your repository/homepage
+# repository: https://github.com/DowranRowshenow/secure_localizations
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  # Required to read the user's pubspec configuration and package name
+  yaml: ^3.1.2
+  path: ^1.9.1
+  secure_strings:
+    path: ../secure_strings
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+# It allows users to run 'dart run secure_localizations' from their terminal.
+executables:
+  secure_localizations: secure_localizations

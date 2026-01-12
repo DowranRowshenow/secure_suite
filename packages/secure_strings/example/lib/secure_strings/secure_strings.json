@@ -1,0 +1,9 @@
+{
+    "title": "Secure Strings",
+    "@Login": {
+        "text": "Hello World",
+        "@Auth": {
+            "name": "Name"
+        }
+    }
+}

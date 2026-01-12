@@ -1,0 +1,87 @@
+# Documentation: https://dart.dev/guides/language/analysis-options
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  # Exclude generated and non-app files to prevent noise in your IDE
+  exclude:
+    - "**/*.g.dart" # json_serializable / build_runner
+    - "**/*.freezed.dart" # Freezed
+    - "**/*.gr.dart" # AutoRoute
+    - "**/*.gen.dart" # Flutter Gen / Riverpod
+    - "lib/generated_plugin_registrant.dart"
+    - "pkgs/**"
+
+  language:
+    # Strong Mode: Ensures type safety and prevents "hidden" dynamic types
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+
+  errors:
+    # Globally enable avoid_print, but you can suppress it per file if needed
+    # To ignore print in specific folders, you must use // ignore_for_file: avoid_print
+    # at the top of your tool scripts.
+    avoid_print: warning
+    todo: ignore
+
+linter:
+  rules:
+    # ==========================================
+    # 1. STRICT TYPE & VARIABLE RULES
+    # ==========================================
+    always_specify_types: true # Force explicit types everywhere
+    always_declare_return_types: true # No missing return types
+    prefer_final_locals: true # Local variables should be final
+    prefer_final_fields: true # Fields should be final if possible
+    prefer_final_in_for_each: true # Final loop variables
+
+    # ==========================================
+    # 2. PERFORMANCE & CONSTRUCTORS
+    # ==========================================
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    use_key_in_widget_constructors: true
+    sized_box_for_whitespace: true
+    avoid_unnecessary_containers: true
+
+    # ==========================================
+    # 3. IMPORTS & ARCHITECTURE
+    # ==========================================
+    prefer_relative_imports: true # Use relative imports in lib/
+    avoid_relative_lib_imports: true # Prevent ../lib/ style imports
+    directives_ordering: true # Keep imports sorted and clean
+
+    # ==========================================
+    # 4. ERROR PRONE & STYLE RULES
+    # ==========================================
+    # General Logic
+    await_only_futures: true
+    avoid_empty_else: true
+    no_duplicate_case_values: true
+    annotate_overrides: true
+    unnecessary_brace_in_string_interps: true
+
+    # Naming Conventions
+    camel_case_extensions: true
+    camel_case_types: true
+    file_names: true
+
+    # Clean Code
+    avoid_init_to_null: true
+    avoid_return_types_on_setters: true
+    avoid_returning_null_for_void: true
+    avoid_shadowing_type_parameters: true
+    avoid_types_as_parameter_names: true
+    empty_constructor_bodies: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+
+    # Layout/Formatting Preferences
+    always_put_required_named_parameters_first: true
+    avoid_single_cascade_in_expression_statements: true
+    avoid_function_literals_in_foreach_calls: true
+
+    # ==========================================
+    # 5. DIAGNOSTICS
+    # ==========================================
+    avoid_print: true # Enabled globally for 'lib'

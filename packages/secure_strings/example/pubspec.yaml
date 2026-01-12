@@ -1,0 +1,27 @@
+name: secure_strings_example
+description: Test project for the encryption tool
+version: 1.0.0
+publish_to: "none"
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+  # This links the example to the package code in the folder above
+  secure_strings:
+    path: ../
+
+# Tool configuration
+secure_strings:
+  # Optional: Where the generated Dart files and helper class should live.
+  # output_dir: "lib/secure_strings/"
+
+flutter:
+  generate: true
