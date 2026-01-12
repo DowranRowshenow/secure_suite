@@ -1,7 +1,7 @@
 name: secure_strings
 description: "A tool for encrypting strings with XOR encryption."
 resolution: workspace
-version: 1.1.0
+version: 1.1.1
 # If you plan to publish to pub.dev, add your repository/homepage
 # repository: https://github.com/DowranRowshenow/secure_strings
 
